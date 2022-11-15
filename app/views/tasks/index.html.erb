@@ -1,0 +1,8 @@
+<h1>Task</h1>
+<ol>
+  <% @tasks.each do |task| %>
+    <li>
+      <%=task.completed ? "🟢" : "🔴" %><%= link_to task.title, task_path(task) %><%= link_to " ✏️Edit", edit_path(task) %><%= link_to " 🚮Delite", delete_path(task) %>
+    </li>
+  <% end %>
+</ol>
